@@ -2,8 +2,6 @@
 curl -X POST \
       'https://api.mercadopago.com/v1/payments'\
        -H 'Content-Type: application/json' \
-       -H 'X-Idempotency-Key: 0d5020ed-1af6-469c-ae06-c3bec19954bb' \,
-       -H 'Authorization: Bearer TEST-4822362795943580-052616-a1a6b20b95392921fadc4e7b2861c294-574326922' \
        -d '{
   "additional_info": {},
   "application_fee": null,
@@ -61,7 +59,7 @@ module.exports = async function generatePix(req, res) {
             headers: {
                 'Content-Type': 'application/json',
                 'X-Idempotency-Key': uuidv4(),
-                'Authorization': 'Bearer APP_USR-7720120362158303-112719-4738946f69e881d96b9421bd074e5b55-1569054020'
+                'Authorization': ''
             },
             data: data
         }
